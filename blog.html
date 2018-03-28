@@ -1,0 +1,13 @@
+---
+layout: page
+title: Blog
+permalink: /blog/
+---
+
+<div class="blog-list" itemscope="" itemtype="http://schema.org/Blog">
+    {% for post in site.posts %}
+        {% if post.type == 'blog' %}
+            {% include long-card.html %}
+        {% endif %}
+    {% endfor %}
+</div>

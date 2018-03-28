@@ -3,6 +3,8 @@ layout: post
 title: Getting Started with Sleek
 featured-img: sleek
 mathjax: true
+permalink: /blog/:title/
+type: blog
 ---
 
 ## Getting started

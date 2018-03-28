@@ -1,0 +1,14 @@
+---
+layout: page
+title: Portfolio
+permalink: /portfolio/
+---
+
+<div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
+
+    {% for post in site.posts %}
+        {% if post.type == 'portfolio' %}
+            {% include card.html %}
+        {% endif %}
+    {% endfor %}
+</div>

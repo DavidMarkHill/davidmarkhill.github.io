@@ -6,7 +6,6 @@ layout: compress
   {% include head.html %}
 
   <body class="site">
-
     {% if site.google_tag_manager %}
 
       <!-- Google Tag Manager (noscript) -->
@@ -28,10 +27,30 @@ layout: compress
     <main class="site__content">
       <section class="blog">
         <div class="container">
+          <h1>Recent Blog Posts</h1>
+
+          <div class="blog-list" itemscope="" itemtype="http://schema.org/Blog">
+            {% for post in site.posts limit:2 %}
+              {% if post.type == 'blog' %}
+                {% include long-card.html %}
+              {% endif %}
+            {% endfor %}
+
+            <a class="btn right" href="/blog">More</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="portfolio">
+        <div class="container">
+          <h1>Portfolio</h1>
+
           <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
 
             {% for post in site.posts %}
-              {% include card.html %}
+              {% if post.type == 'portfolio' %}
+                {% include card.html %}
+              {% endif %}
             {% endfor %}
 
             <!-- {% include pagination.html %} -->
@@ -41,7 +60,5 @@ layout: compress
     </main>
 
     {% include footer.html %}
-
   </body>
-
 </html>
