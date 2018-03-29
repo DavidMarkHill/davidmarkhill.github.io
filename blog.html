@@ -5,10 +5,16 @@ permalink: /blog/
 featured-img: blog-lg
 ---
 
-<div class="blog-list" itemscope="" itemtype="http://schema.org/Blog">
-    {% for post in site.posts %}
-        {% if post.type == 'blog' %}
-            {% include long-card.html %}
-        {% endif %}
-    {% endfor %}
+<div class="blog__content">
+    <section>
+        <div class="container-fluid">
+            <div class="blog-list" itemscope="" itemtype="http://schema.org/Blog">
+                {% for post in site.posts %}
+                    {% if post.type == 'blog' %}
+                        {% include long-card.html %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
 </div>
