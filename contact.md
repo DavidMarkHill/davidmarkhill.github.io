@@ -2,6 +2,7 @@
 layout: page
 title: Contact
 permalink: /contact/
+featured-img: contact-lg
 ---
 
 ### Let's have a chat

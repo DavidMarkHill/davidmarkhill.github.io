@@ -17,7 +17,7 @@ layout: compress
 
     {% include header.html %}
 
-    <div class="hero lazyload" data-bg="{{site.url}}/assets/img/posts/sleek_lg.jpg">
+    <div class="hero lazyload paralax" data-bg="{{site.url}}/assets/img/posts/sleek_lg.jpg">
       <div class="hero__wrap">
         <h1 class="hero__title">David Hill</h1>
         <p class="hero__meta">Personal blog and portfolio website</p>
@@ -27,7 +27,7 @@ layout: compress
     <main class="site__content">
       <section class="blog">
         <div class="container">
-          <h1>Recent Blog Posts</h1>
+          <h1 class="center">Recent Blog Posts</h1>
 
           <div class="blog-list" itemscope="" itemtype="http://schema.org/Blog">
             {% for post in site.posts limit:2 %}
@@ -35,6 +35,7 @@ layout: compress
                 {% include long-card.html %}
               {% endif %}
             {% endfor %}
+            <!-- {% include pagination.html %} -->
 
             <a class="btn right" href="/blog">More</a>
           </div>
@@ -52,8 +53,6 @@ layout: compress
                 {% include card.html %}
               {% endif %}
             {% endfor %}
-
-            <!-- {% include pagination.html %} -->
           </div>
         </div>
       </section>

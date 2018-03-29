@@ -462,3 +462,10 @@ a{
         padding-top:5em
     }
 }
+
+.paralax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
