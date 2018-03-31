@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Welcome to my Blog
+title: Category and Tag Test
 directory: welcome
 featured-img: welcome-lg
 featured-img-banner: welcome-banner
 mathjax: true
 permalink: /blog/:title/
-category: Misc
-tags: [welcome]
+category: Web
+tags: [web, jekyll, tag with spaces]
 type: blog
 summary: I'm excited to introduce my engineering blog where I'll be discussing anything and everything
          relating to the field of software development. This blog is a means for me to to document my progress throughout my career, as well as 

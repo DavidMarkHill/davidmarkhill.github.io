@@ -1,31 +1,39 @@
 <a class="blog-card" href="{{ post.url | relative_url }}" itemprop="blogPosts" itemscope="" itemtype="http://schema.org/BlogPosting">
     <h2>{{ post.title | strip_html | truncate: 100 }}</h2>
     {% if post.featured-img-banner %}
-    <figure class="post-card__thumb image-height">
-            <img
-                    src="{{site.url}}/assets/img/posts/{{post.type}}/{{post.directory}}/{{post.featured-img-banner}}.jpg",
-                    data-srcset="{{site.url}}/assets/img/posts/{{post.type}}/{{post.directory}}/{{post.featured-img-banner}}.jpg"
-                    class="lazyload blur image-height"
-                    alt="{{post.title}}"
-            />
-            <noscript><img src="{{site.url}}/assets/img/posts/{{post.type}}/{{post.directory}}/{{post.featured-img-banner}}.jpg" alt="{{ post.title }}"></noscript>
-    </figure>
+        <figure class="post-card__thumb image-height">
+                <img
+                        src="{{site.url}}/assets/img/posts/{{post.type}}/{{post.directory}}/{{post.featured-img-banner}}.jpg",
+                        data-srcset="{{site.url}}/assets/img/posts/{{post.type}}/{{post.directory}}/{{post.featured-img-banner}}.jpg"
+                        class="lazyload blur image-height"
+                        alt="{{post.title}}"
+                />
+                <noscript><img src="{{site.url}}/assets/img/posts/{{post.type}}/{{post.directory}}/{{post.featured-img-banner}}.jpg" alt="{{ post.title }}"></noscript>
+        </figure>
     {% else %}
-    <figure class="post-card__thumb image-height">
-        <div class="dark-bg image-height"></div>
-    </figure>
+        <figure class="post-card__thumb image-height">
+            <div class="dark-bg image-height"></div>
+        </figure>
     {% endif %}
     <div class="post-card__inner">
         <div class="post-card__header">
             {% assign date_format = site.sleek.date_format | default: "%b %-d, %Y" %}
             <span class="post-card__meta">
+                <div class="right">
+                    {% for tag in post.tags %}
+                        <a href="/blog/tags/">{{ tag }}</a>
+                    {% endfor %}
+                    {% if post.category %}
+                        <a href="/blog/categories/">{{ post.category }}</a>
+                    {% endif %}
+                </div>
                 <time>{{ post.date | date: date_format }}</time>
             </span>
         </div>
         {% if post.summary %}
-        <p>{{ post.summary | strip_html | truncatewords:100 }}</p>
+            <p>{{ post.summary | strip_html | truncatewords:100 }}</p>
         {% else %}
-        <p>{{ post.content | strip_html | truncatewords:100 }}</p>
+            <p>{{ post.content | strip_html | truncatewords:100 }}</p>
         {% endif %}
     </div>
 
