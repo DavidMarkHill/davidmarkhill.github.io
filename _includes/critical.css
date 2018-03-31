@@ -471,7 +471,6 @@ a{
 
 .social-links {
     padding: 0 0;
-    font-size: 0.875rem;
     color: #7a7a7a;
 }
 
@@ -480,7 +479,32 @@ a{
     border-bottom: 0;
 }
 
-.social-links a:hover {
-     color: #277cea;
+.social-links > * {
+    margin-right: 10px;
+}
+
+.social-links-facebook:hover {
+     color: #4267b2;
      border-bottom: 0;
  }
+
+.social-links-github:hover {
+    color: #2dba4e;
+    border-bottom: 0;
+}
+
+.social-links-instagram:hover {
+    color: #bd3381;
+    border-bottom: 0;
+}
+
+.social-links-linkedin:hover {
+    color: #283e4a;
+    border-bottom: 0;
+}
+
+.social-links-bitbucket:hover {
+    color: #0747a6;
+    border-bottom: 0;
+}
+
