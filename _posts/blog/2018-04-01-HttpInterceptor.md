@@ -2,8 +2,8 @@
 layout: post
 title: Intercepting HTTP Requests in Angular
 directory: httpinterceptor
-featured-img: welcome-lg
-featured-img-banner: welcome-banner
+featured-img: lg
+featured-img-banner: banner
 mathjax: true
 permalink: /blog/:title/
 category: Angular
@@ -14,10 +14,10 @@ summary: With the introduction of Angular 4.3 comes the HttpInterceptor interfac
 
 ## Creating the Http Interceptor ##
 The first task is to create an `Interceptor` class which implements the `HttpInterceptor` interface.
-The function of this class is to include a Json Web Token that will be stored locally as the Authorization header in
+The function of this class is to include a locally stored Json Web Token as the Authorization header in
 all Http requests sent to the server.
 
-The `Interceptor` class will use the `getToken()` method supplied by my `Authorization` service to retrieve the locally stored JWT:
+The `Interceptor` class will use the `getToken()` method supplied by my `Authorization` service to retrieve the JWT:
 
 ```typescript
 //src/app/auth/auth.service.ts
@@ -101,14 +101,14 @@ import { TokenInterceptor } from './auth/token.interceptor';
 })
 ```
 
-If we now make a Http request to the server, the JWT should now be automatically
+If we now make a Http request to the server, the JWT should be automatically
 attached to the request header.
 
 The following images show the `HttpRequest` before and after the intercept:
 
 ![alt text](../../assets/img/posts/blog/httpinterceptor/before-intercept.JPG "Before Html Intercept")
 
-![alt text](../../assets/img/posts/blog/httpinterceptor/before-intercept.JPG "After Html Intercept")
+![alt text](../../assets/img/posts/blog/httpinterceptor/after-intercept.JPG "After Html Intercept")
 
 ## Conclusion ##
 The `HttpInterceptor` interface ultimately simplifies a previously long-winded operation of 
