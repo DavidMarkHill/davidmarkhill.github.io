@@ -23,9 +23,9 @@
                     {% for tag in post.tags %}
                         <a href="/blog/tags/">{{ tag }}</a>
                     {% endfor %}
-                    {% if post.category %}
+                    <!--{% if post.category %}
                         <a href="/blog/categories/">{{ post.category }}</a>
-                    {% endif %}
+                    {% endif %}-->
                 </div>
                 <time>{{ post.date | date: date_format }}</time>
             </span>
@@ -35,8 +35,11 @@
         {% else %}
             <p>{{ post.content | strip_html | truncatewords:100 }}</p>
         {% endif %}
+        <a class="btn right" href="{{ post.url | relative_url }}">Full Story</a>
+
     </div>
 
+    <br>
     <div class="social-links">
         {% include social-links.html %}
     </div>

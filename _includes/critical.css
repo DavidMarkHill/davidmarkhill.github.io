@@ -186,7 +186,7 @@ a{
     color:#313237
 }
 .header__logo .header__logo--container{
-    width:58px
+    width:60px
 }
 .header__logo .header__logo--container .logo{
     fill:currentColor
@@ -293,7 +293,10 @@ a{
 }
 
 .image-height {
+    display: block;
     max-height: 250px;
+    object-fit: cover;
+    object-position: 0 0;
 }
 
 .post-card{

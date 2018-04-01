@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Intercepting HTTP Requests in Angular
+title: Intercepting Http Requests with Angular
 directory: httpinterceptor
 featured-img: lg
 featured-img-banner: banner
 mathjax: true
 permalink: /blog/:title/
 category: Angular
-tags: [Angular]
+tags: [Angular, TypeScript]
 type: blog
-summary: With the introduction of Angular 4.3 comes the HttpInterceptor interface. A benefit of this is to allow us to transform outgoing requests (preprocess) and transform response event streams (postprocess) of Http requests. In this blog post, I'm going to take advantage of preprocessing requests using Angular's HttpInterceptor to automatically attach authentication information to response headers.
+summary: With the introduction of Angular 4.3 comes the HttpInterceptor interface. A benefit of this is to allow us to transform outgoing requests (preprocess) and response event streams (postprocess) of Http requests. In this blog post, I'm going to take advantage of preprocessing requests using Angular's HttpInterceptor to automatically attach authentication information to response headers.
 ---
 
 ## Creating the Http Interceptor ##
